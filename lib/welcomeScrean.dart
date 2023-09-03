@@ -25,8 +25,15 @@ class welcomeScrean extends StatelessWidget{
                     borderRadius: BorderRadius.only(bottomRight: Radius.circular(70)),
                     
               ),
+                child: Center(
+                  child: Image.asset(
+                    "images/books.png",
+                    scale: 0.8,
+                  ),
+                ),
               ),
-            ],),
+            ],
+            ),
           ],
         ),
 
