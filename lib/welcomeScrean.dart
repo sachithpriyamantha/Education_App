@@ -34,6 +34,40 @@ class welcomeScrean extends StatelessWidget{
               ),
             ],
             ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 2.666,
+                decoration: BoxDecoration(
+                  color: Color(0xFF674AEF),
+                ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 2.666,
+                padding: EdgeInsets.only(top: 40, bottom: 30),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(topLeft: Radius.circular(70),
+                  ),
+                ),
+                child: Column(children: [
+                  Text(
+                      "Learning is Life",
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1,
+                      wordSpacing: 2,
+                    ),
+                  ),
+                ],),
+              ),
+            ),
           ],
         ),
 
