@@ -4,30 +4,30 @@ class HomePage extends StatelessWidget{
 
   List catNames = [
     "Category",
-    'Clases',
+    "Classes",
     'Free Courses',
     'BookStore',
     'Live Course',
     'LeaderBoard',
   ];
   List<Color> catColors = [
-    Color(0xFFFFCF2F),
-    Color(0xFF6FE88D),
-    Color(0xFF61BDFD),
-    Color(0xFFFC7F7F),
-    Color(0xFFCB84FB),
-    Color(0xFF78E667),
+    const Color(0xFFFFCF2F),
+    const Color(0xFF6FE88D),
+    const Color(0xFF61BDFD),
+    const Color(0xFFFC7F7F),
+    const Color(0xFFCB84FB),
+    const Color(0xFF78E667),
 
 
   ];
 
   List<Icon> catIcons = [
-    Icon(Icons.category, color: Colors.white, size: 30),
-    Icon(Icons.video_library, color: Colors.white, size: 30),
-    Icon(Icons.assessment, color: Colors.white, size: 30),
-    Icon(Icons.store, color: Colors.white, size: 30),
-    Icon(Icons.play_circle_fill, color: Colors.white, size: 30),
-    Icon(Icons.emoji_events, color: Colors.white, size: 30),
+    const Icon(Icons.category, color: Colors.white, size: 30),
+    const Icon(Icons.video_library, color: Colors.white, size: 30),
+    const Icon(Icons.assessment, color: Colors.white, size: 30),
+    const Icon(Icons.store, color: Colors.white, size: 30),
+    const Icon(Icons.play_circle_fill, color: Colors.white, size: 30),
+    const Icon(Icons.emoji_events, color: Colors.white, size: 30),
   ];
 
   @override
@@ -38,7 +38,7 @@ class HomePage extends StatelessWidget{
           Container(
             padding: const EdgeInsets.only(top: 15, left: 15, right: 15, bottom: 10),
             decoration: const BoxDecoration(
-              color: Color(0XFF674AEF),
+              color: Color(0xFF674AEF),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget{
             child:  Column(
              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Icon(
@@ -62,8 +62,8 @@ class HomePage extends StatelessWidget{
                     ),
                   ],
                 ),
-                SizedBox(height: 20,),
-                Padding(padding: EdgeInsets.only(left: 3, bottom: 15),
+                const SizedBox(height: 20,),
+                const Padding(padding: EdgeInsets.only(left: 3, bottom: 15),
                   child: Text("Hi, Everyone..", style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.w600,
@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget{
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 5, bottom: 20),
+                  margin: const EdgeInsets.only(top: 5, bottom: 20),
                   width: MediaQuery.of(context).size.width,
                   height: 55,
                   alignment: Alignment.center,
@@ -90,27 +90,41 @@ class HomePage extends StatelessWidget{
                       hintStyle: TextStyle(
                         color: Colors.black.withOpacity(0.5),
                       ),
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                           Icons.search,
                         size: 25,
                       ),
                     ),
                   ),
                 ),
-                Padding(padding: EdgeInsets.only(top: 20, left: 15, right: 15),
+                Padding(padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
                   child: Column(
                     children: [
                     GridView.builder(
                         itemCount: catNames.length,
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        physics: const NeverScrollableScrollPhysics(),
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 3,
                           childAspectRatio: 1.1,
 
                     ),
                       itemBuilder: (context, index){
-                          return Column();
+                          return Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  color: catColors[index],
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Center(
+                                  child: catIcons[index],
+                                ),
+                              ),
+                            ],
+                          );
                       },
                     ),
                   ],),
