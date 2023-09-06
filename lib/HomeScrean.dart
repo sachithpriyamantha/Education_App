@@ -29,6 +29,9 @@ class HomePage extends StatelessWidget{
     const Icon(Icons.play_circle_fill, color: Colors.white, size: 30),
     const Icon(Icons.emoji_events, color: Colors.white, size: 30),
   ];
+  List imgList = [
+    'C#'
+  ];
 
   @override
   Widget build(BuildContext context){
@@ -127,13 +130,13 @@ class HomePage extends StatelessWidget{
                             child: catIcons[index],
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text(
                           catNames[index],
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
-                            color: Colors.white.withOpacity(0.7),
+                            color: Colors.black.withOpacity(0.7),
                           ),
                         ),
                       ],
@@ -149,7 +152,51 @@ class HomePage extends StatelessWidget{
                         fontWeight: FontWeight.w600,
                       ),
                     ),
+                    Text("Sea All",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFF674AEF),
+                      ),
+                    ),
                   ],
+                ),
+                const SizedBox(height: 10),
+                GridView.builder(
+                  itemCount: imgList.length,
+                  shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      childAspectRatio: (MediaQuery.of(context).size.height - 50 - 25) / (4 * 240),
+                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 10,
+                    ),
+                  itemBuilder: (context, index){
+                    return InkWell(
+                      onTap: (){},
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: const Color(0xFFF5F3FF),
+                        ),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Image.asset(
+                                "images/${imgList[index]}.png",
+                                width: 100,
+                                height: 100,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+
                 ),
               ],
             ),
