@@ -192,7 +192,7 @@ class HomePage extends StatelessWidget{
                                 height: 100,
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Text(
                               imgList[index],
                               style: TextStyle(
@@ -201,7 +201,7 @@ class HomePage extends StatelessWidget{
                                 color: Colors.black.withOpacity(0.6),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Text("5 videos", style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w500,
@@ -220,11 +220,12 @@ class HomePage extends StatelessWidget{
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: true,
         iconSize: 32,
-        selectedItemColor: Color(0xFF674AEF),
+        selectedItemColor: const Color(0xFF674AEF),
         selectedFontSize: 18,
         unselectedItemColor: Colors.grey,
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.assessment),label: 'Courses'),
           BottomNavigationBarItem(icon: Icon(Icons.favorite),label: 'Wishlist'),
