@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget{
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
-              )
+              ),
             ),
             child:  Column(
              crossAxisAlignment: CrossAxisAlignment.start,
@@ -123,11 +123,32 @@ class HomePage extends StatelessWidget{
                                   child: catIcons[index],
                                 ),
                               ),
+                              SizedBox(height: 10),
+                              Text(
+                                catNames[index],
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white.withOpacity(0.7),
+                                ),
+                              ),
                             ],
                           );
                       },
                     ),
-                  ],),
+                     Row(
+                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                       children: [
+                         Text("Courses",
+                         style: TextStyle(
+                           fontSize: 23,
+                           fontWeight: FontWeight.w600,
+                         ),
+                         ),
+                       ],
+                     ), 
+                  ],
+                  ),
                 ),
               ],
             ),
