@@ -97,58 +97,59 @@ class HomePage extends StatelessWidget{
                     ),
                   ),
                 ),
-                Padding(padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
-                  child: Column(
-                    children: [
-                    GridView.builder(
-                        itemCount: catNames.length,
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 3,
-                          childAspectRatio: 1.1,
 
-                    ),
-                      itemBuilder: (context, index){
-                          return Column(
-                            children: [
-                              Container(
-                                height: 60,
-                                width: 60,
-                                decoration: BoxDecoration(
-                                  color: catColors[index],
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Center(
-                                  child: catIcons[index],
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                catNames[index],
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.white.withOpacity(0.7),
-                                ),
-                              ),
-                            ],
-                          );
-                      },
-                    ),
-                     Row(
-                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                       children: [
-                         Text("Courses",
-                         style: TextStyle(
-                           fontSize: 23,
-                           fontWeight: FontWeight.w600,
-                         ),
-                         ),
-                       ],
-                     ), 
-                  ],
+              ],
+            ),
+          ),
+          Padding(padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
+            child: Column(
+              children: [
+                GridView.builder(
+                  itemCount: catNames.length,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    childAspectRatio: 1.1,
+
                   ),
+                  itemBuilder: (context, index){
+                    return Column(
+                      children: [
+                        Container(
+                          height: 60,
+                          width: 60,
+                          decoration: BoxDecoration(
+                            color: catColors[index],
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
+                            child: catIcons[index],
+                          ),
+                        ),
+                        SizedBox(height: 10),
+                        Text(
+                          catNames[index],
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white.withOpacity(0.7),
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Courses",
+                      style: TextStyle(
+                        fontSize: 23,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
