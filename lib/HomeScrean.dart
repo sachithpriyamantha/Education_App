@@ -30,7 +30,8 @@ class HomePage extends StatelessWidget{
     const Icon(Icons.emoji_events, color: Colors.white, size: 30),
   ];
   List imgList = [
-    'C#'
+    'C#',
+    'Flutter',
   ];
 
   @override
@@ -191,6 +192,21 @@ class HomePage extends StatelessWidget{
                                 height: 100,
                               ),
                             ),
+                            SizedBox(height: 10),
+                            Text(
+                              imgList[index],
+                              style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black.withOpacity(0.6),
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text("5 videos", style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black.withOpacity(0.5),
+                            ),)
                           ],
                         ),
                       ),
@@ -201,6 +217,18 @@ class HomePage extends StatelessWidget{
               ],
             ),
           ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        iconSize: 32,
+        selectedItemColor: Color(0xFF674AEF),
+        selectedFontSize: 18,
+        unselectedItemColor: Colors.grey,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.assessment),label: 'Courses'),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite),label: 'Wishlist'),
+          BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Account'),
         ],
       ),
     );
