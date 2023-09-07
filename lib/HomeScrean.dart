@@ -178,8 +178,8 @@ class HomePage extends StatelessWidget{
                     return InkWell(
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (Context) => CourseScrean(imgList[index]);
-                        ),),
+                            builder: (Context) => CourseScrean(imgList[index]),
+                        ),);
                       },
                       child: Container(
                         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
