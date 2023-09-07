@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:main/CourseScrean.dart';
 
 class HomePage extends StatelessWidget{
 
@@ -175,7 +176,11 @@ class HomePage extends StatelessWidget{
                     ),
                   itemBuilder: (context, index){
                     return InkWell(
-                      onTap: (){},
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (Context) => CourseScrean(imgList[index]);
+                        ),),
+                      },
                       child: Container(
                         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                         decoration: BoxDecoration(
