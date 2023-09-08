@@ -9,6 +9,8 @@ class CourseScrean extends StatefulWidget {
 }
 
 class _CourseScreanState extends State<CourseScrean> {
+
+  bool isVideosSection = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,7 +105,7 @@ class _CourseScreanState extends State<CourseScrean> {
                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                    children: [
                      Material(
-                       color: const Color(0xFF674AEF),
+                       color: isVideosSection ? Color(0xFF674AEF) :Color(0xFF674AEF).withOpacity(0.6),
                        borderRadius: BorderRadius.circular(10),
                        child: InkWell(
                          onTap: (){},
@@ -119,7 +121,26 @@ class _CourseScreanState extends State<CourseScrean> {
                            ),
                          ),
                        ),
-                     )
+
+                     ),
+                     Material(
+                       color: const Color(0xFF674AEF),
+                       borderRadius: BorderRadius.circular(10),
+                       child: InkWell(
+                         onTap: (){},
+                         child: Container(
+                           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 35),
+                           child: const Text(
+                             "Description",
+                             style: TextStyle(
+                               color: Colors.white,
+                               fontSize: 20,
+                               fontWeight: FontWeight.w500,
+                             ),
+                           ),
+                         ),
+                       ),
+                     ),
                    ],
                  ),
                )
