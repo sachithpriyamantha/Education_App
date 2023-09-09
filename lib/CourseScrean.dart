@@ -105,10 +105,15 @@ class _CourseScreanState extends State<CourseScrean> {
                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                    children: [
                      Material(
-                       color: isVideosSection ? Color(0xFF674AEF) :Color(0xFF674AEF).withOpacity(0.6),
+                       color: isVideosSection ? const Color(0xFF674AEF)
+                           : const Color(0xFF674AEF).withOpacity(0.6),
                        borderRadius: BorderRadius.circular(10),
                        child: InkWell(
-                         onTap: (){},
+                         onTap: (){
+                           setState(() {
+                             isVideosSection = true;
+                           });
+                         },
                          child: Container(
                            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 35),
                            child: const Text(
@@ -124,10 +129,16 @@ class _CourseScreanState extends State<CourseScrean> {
 
                      ),
                      Material(
-                       color: const Color(0xFF674AEF),
+                       color: isVideosSection ? const Color(0xFF674AEF).withOpacity(0.6)
+                       : const Color(0xFF674AEF) ,
                        borderRadius: BorderRadius.circular(10),
                        child: InkWell(
-                         onTap: (){},
+                         onTap: (){
+                           setState(() {
+                             isVideosSection = false;
+                           });
+
+                         },
                          child: Container(
                            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 35),
                            child: const Text(
@@ -143,7 +154,8 @@ class _CourseScreanState extends State<CourseScrean> {
                      ),
                    ],
                  ),
-               )
+               ),
+
              ],
         ),
       ),
