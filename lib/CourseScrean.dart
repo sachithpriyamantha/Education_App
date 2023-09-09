@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:main/widgets/DescriptionSection.dart';
+import 'package:main/widgets/VideoSection.dart';
 
 class CourseScrean extends StatefulWidget {
   String img;
@@ -155,7 +157,8 @@ class _CourseScreanState extends State<CourseScrean> {
                    ],
                  ),
                ),
-
+               const SizedBox(height: 10),
+               isVideosSection ? VideoSection() : DescriptionSection(),
              ],
         ),
       ),
