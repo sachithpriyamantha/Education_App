@@ -21,8 +21,15 @@ class VideoSection extends StatelessWidget{
                 color: index == 0 ?
                 const Color(0xFF674AEF) :
                 const Color(0xFF674AEF).withOpacity(0.6),
+                shape: BoxShape.circle,
               ),
+            child: const Icon(Icons.play_arrow_rounded,
+            color: Colors.white,
+              size:30,
+            ),
           ),
+          title: Text(videoList[index]),
+          subtitle: const Text("20 min 50sec"),
         );
       },
     );
