@@ -13,6 +13,7 @@ class VideoSection extends StatelessWidget{
     return ListView.builder(
       itemCount: videoList.length,
       physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
       itemBuilder: (context, index){
         return ListTile(
           leading: Container(

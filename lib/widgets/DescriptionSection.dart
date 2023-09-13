@@ -14,6 +14,7 @@ class DescriptionSection extends StatelessWidget{
           ),
             textAlign: TextAlign.justify,
           ),
+          SizedBox(height: SizedBox({key? key, double? width, double}),)
         ],
       ),
     );
