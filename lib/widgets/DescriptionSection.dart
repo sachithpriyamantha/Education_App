@@ -14,7 +14,26 @@ class DescriptionSection extends StatelessWidget{
           ),
             textAlign: TextAlign.justify,
           ),
-          SizedBox(height: SizedBox({key? key, double? width, double}),)
+         SizedBox(height: 10),
+          Row(
+            children: [
+              Icon(
+                Icons.timer,
+                color: Color(0xFF674AEF),
+              ),
+              SizedBox(width: 5),
+              Text(
+                  "24 hours",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                ),
+
+
+              ),
+            ],
+          )
+
         ],
       ),
     );
