@@ -6,7 +6,7 @@ class DescriptionSection extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Padding(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
       child: Column(
         children: [
           Text("vjkakjv bvjdabjvkjv jvbkvbkf v vjv kv  j beibf v bf nk kn h efbfe jbij beginfnjgifj ",
@@ -20,13 +20,23 @@ class DescriptionSection extends StatelessWidget{
           const Row(
             children: [
               Text(
-                "Course Length: ",
+                "Rating: ",
                 style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 19,
+                  fontWeight: FontWeight.w600,
                 ),
 
               ),
+              Text(
+                "Course Length: ",
+                style: TextStyle(
+                  fontSize: 19,
+                  fontWeight: FontWeight.w600,
+                ),
+
+              ),
+
+
               SizedBox(width: 5),
               Icon(
                 Icons.timer,
@@ -39,11 +49,10 @@ class DescriptionSection extends StatelessWidget{
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),
-
-
-              ),
+             ),
             ],
           ),
+          const SizedBox(height: 10),
           const Row(
             children: [
               Icon(
