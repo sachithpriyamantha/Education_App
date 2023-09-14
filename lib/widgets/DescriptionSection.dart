@@ -33,7 +33,6 @@ class DescriptionSection extends StatelessWidget{
                   fontSize: 19,
                   fontWeight: FontWeight.w600,
                 ),
-
               ),
 
 
@@ -66,8 +65,6 @@ class DescriptionSection extends StatelessWidget{
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),
-
-
               ),
             ],
           ),

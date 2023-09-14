@@ -35,7 +35,7 @@ class _CourseScreanState extends State<CourseScrean> {
             child: Icon(
               Icons.notifications,
               size: 28,
-              color: Color(0xFF674AEF),
+              color: Color(0xFF090E6B),
             ),
           ),
         ],
@@ -131,7 +131,7 @@ class _CourseScreanState extends State<CourseScrean> {
 
                      ),
                      Material(
-                       color: isVideosSection ? const Color(0xFF674AEF).withOpacity(0.6)
+                       color: isVideosSection ? const Color(0xFF090E6B).withOpacity(0.6)
                        : const Color(0xFF674AEF) ,
                        borderRadius: BorderRadius.circular(10),
                        child: InkWell(
