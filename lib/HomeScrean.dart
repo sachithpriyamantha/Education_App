@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget{
           Container(
             padding: const EdgeInsets.only(top: 15, left: 15, right: 15, bottom: 10),
             decoration: const BoxDecoration(
-              color: Color(0xFF674AEF),
+              color: Color(0xFF090E6B),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
@@ -158,7 +158,7 @@ class HomePage extends StatelessWidget{
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
-                        color: Color(0xFF674AEF),
+                        color: Color(0xFF090E6B),
                       ),
                     ),
                   ],
@@ -227,7 +227,7 @@ class HomePage extends StatelessWidget{
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: true,
         iconSize: 32,
-        selectedItemColor: const Color(0xFF674AEF),
+        selectedItemColor: const Color(0xFF090E6B),
         selectedFontSize: 18,
         unselectedItemColor: Colors.grey,
         items: const [

@@ -64,7 +64,7 @@ class _CourseScreanState extends State<CourseScrean> {
                      ),
                      child: const Icon(
                        Icons.play_arrow_rounded,
-                     color: Color(0xFF674AEF),
+                     color: Color(0xFF090E6B),
                        size: 40,
                      ),
                    ),
@@ -107,8 +107,8 @@ class _CourseScreanState extends State<CourseScrean> {
                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                    children: [
                      Material(
-                       color: isVideosSection ? const Color(0xFF674AEF)
-                           : const Color(0xFF674AEF).withOpacity(0.6),
+                       color: isVideosSection ? const Color(0xFF090E6B)
+                           : const Color(0xFF090E6B).withOpacity(0.6),
                        borderRadius: BorderRadius.circular(10),
                        child: InkWell(
                          onTap: (){
@@ -132,7 +132,7 @@ class _CourseScreanState extends State<CourseScrean> {
                      ),
                      Material(
                        color: isVideosSection ? const Color(0xFF090E6B).withOpacity(0.6)
-                       : const Color(0xFF674AEF) ,
+                       : const Color(0xFF090E6B) ,
                        borderRadius: BorderRadius.circular(10),
                        child: InkWell(
                          onTap: (){

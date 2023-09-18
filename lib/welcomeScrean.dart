@@ -24,7 +24,7 @@ class welcomeScrean extends StatelessWidget{
                 decoration: const BoxDecoration(
                     color: Color(0xFF090E6B),
                     borderRadius: BorderRadius.only(bottomRight: Radius.circular(70)),
-                    
+
               ),
                 child: Center(
                   child: Image.asset(
@@ -32,15 +32,16 @@ class welcomeScrean extends StatelessWidget{
                     scale: 0.8,
                 ),
               ),
-            ],
-            ),
+              ),
+             ],
+             ),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 2.666,
                 decoration: const BoxDecoration(
-                  color: Color(0xFF674AEF),
+                  color: Color(0xFF090E6B),
                 ),
               ),
             ),
@@ -79,7 +80,7 @@ class welcomeScrean extends StatelessWidget{
                   ),
                   const SizedBox(height: 60),
                   Material(
-                    color: const Color(0xFF674AEF),
+                    color: const Color(0xFF090E6B),
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
                       onTap: (){

@@ -20,8 +20,8 @@ class VideoSection extends StatelessWidget{
               padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: index == 0 ?
-                const Color(0xFF674AEF) :
-                const Color(0xFF674AEF).withOpacity(0.6),
+                const Color(0xFF090E6B) :
+                const Color(0xFF090E6B).withOpacity(0.6),
                 shape: BoxShape.circle,
               ),
             child: const Icon(Icons.play_arrow_rounded,
